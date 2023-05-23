@@ -15,10 +15,10 @@ export default {
       title: 'Catégorie du projet',
       options: {
         list: [
-          {title: 'Bars Restaurants', value: 'bars-restaurants'},
+          {title: 'Bar Restaurant', value: 'bar-restaurant'},
           {title: 'Bureaux', value: 'bureaux'},
           {title: 'Coworking', value: 'coworking'},
-          {title: 'Hôtels', value: 'hotels'},
+          {title: 'Hôtel', value: 'hotel'},
           {title: 'Logements', value: 'logements'},
         ],
       },
