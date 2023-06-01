@@ -10,6 +10,16 @@ export default {
       validation: (Rule) => Rule.required(),
     },
     {
+      name: 'slug',
+      type: 'slug',
+      title: 'URL du projet',
+      validation: (Rule) => Rule.required(),
+      options: {
+        source: 'name',
+        maxLength: 96,
+      },
+    },
+    {
       name: 'category',
       type: 'string',
       title: 'Catégorie du projet',
@@ -40,17 +50,6 @@ export default {
       name: 'image',
       type: 'image',
       title: 'Image du projet',
-      validation: (Rule) => Rule.required(),
-    },
-    {
-      name: 'slug',
-      type: 'slug',
-      title: 'URL du projet',
-      options: {
-        source: 'name',
-        auto: true,
-        maxLength: 96,
-      },
       validation: (Rule) => Rule.required(),
     },
   ],
