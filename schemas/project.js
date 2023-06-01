@@ -13,6 +13,7 @@ export default {
       name: 'category',
       type: 'string',
       title: 'Catégorie du projet',
+      validation: (Rule) => Rule.required(),
       options: {
         list: [
           {title: 'Bar Restaurant', value: 'Bar-Restaurant'},
@@ -27,16 +28,19 @@ export default {
       name: 'city',
       type: 'string',
       title: 'Ville du projet',
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'surface',
       type: 'number',
       title: 'Surface du projet (m²)',
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'image',
       type: 'image',
       title: 'Image du projet',
+      validation: (Rule) => Rule.required(),
     },
   ],
 }
