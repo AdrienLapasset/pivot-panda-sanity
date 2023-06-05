@@ -52,5 +52,32 @@ export default {
       title: 'Image du projet',
       validation: (Rule) => Rule.required(),
     },
+    {
+      name: 'mission',
+      type: 'string',
+      title: 'Mission réalisée par Pivot Panda',
+      validation: (Rule) => Rule.required(),
+    },
+    {
+      name: 'year',
+      type: 'date',
+      title: 'Année',
+      validation: (Rule) => Rule.required(),
+      options: {
+        dateFormat: 'YYYY',
+      },
+    },
+    {
+      name: 'address',
+      type: 'string',
+      title: 'Adresse',
+      validation: (Rule) => Rule.required(),
+    },
+    {
+      name: 'description',
+      type: 'text',
+      title: 'Description',
+      validation: (Rule) => Rule.required(),
+    },
   ],
 }
