@@ -79,5 +79,11 @@ export default {
       title: 'Description',
       validation: (Rule) => Rule.required(),
     },
+    {
+      name: 'contentBlocks',
+      title: 'Blocs de contenu',
+      type: 'array',
+      of: [{type: 'contentBlock'}],
+    },
   ],
 }
