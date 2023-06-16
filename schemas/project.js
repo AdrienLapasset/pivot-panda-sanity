@@ -85,5 +85,11 @@ export default {
       type: 'array',
       of: [{type: 'contentBlock'}],
     },
+    {
+      name: 'beforeAfterImages',
+      title: 'Section avant / après travaux',
+      type: 'array',
+      of: [{type: 'beforeAfterImages'}],
+    },
   ],
 }
