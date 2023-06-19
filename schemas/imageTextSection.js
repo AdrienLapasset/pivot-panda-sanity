@@ -1,13 +1,14 @@
 export default {
   name: 'ImageTextSection',
-  title: 'Section photo et description',
+  title: 'Section image et texte',
+  Description: 'Une section simple avec une image et un texte',
   type: 'object',
   fields: [
     {
       name: 'image',
       title: 'Image',
       type: 'image',
-      description: 'Photo de la section',
+      description: 'Image de la section',
       options: {hotspot: true},
     },
     {
@@ -29,7 +30,7 @@ export default {
       name: 'text',
       title: 'Texte',
       type: 'text',
-      description: 'Texte associé au bloc de contenu',
+      description: "Texte associé à l'image",
     },
   ],
   preview: {
