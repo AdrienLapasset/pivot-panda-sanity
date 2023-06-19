@@ -1,8 +1,51 @@
+import {createClient} from '@sanity/client'
+
+export const client = createClient({
+  projectId: 'pp1ujuyb',
+  dataset: 'production',
+  useCdn: true,
+  apiVersion: '2023-05-03',
+})
+
 export default {
   name: 'project',
   type: 'document',
   title: 'Projets',
   fields: [
+    {
+      title: "Projet sur la page d'accueil",
+      description: "Projet visble dans le carrousel de la page d'accueil (3 max.)",
+      name: 'isFeaturedProject',
+      type: 'boolean',
+      validation: (Rule) =>
+        Rule.custom(async (value, context) => {
+          const documentId = context.document._id
+          let currentCount = 0
+          if (value === true) currentCount = 1
+          const featuredProject = await client.fetch(`*[_type == 'project' && isFeaturedProject]`)
+          console.log('featuredProjectLenght =>', featuredProject.length)
+          const isFeaturedProject = featuredProject.some((project) => project._id === documentId)
+          if (isFeaturedProject) {
+            console.log('isfeaturedProject')
+            return true
+          } else if (currentCount + featuredProject.length > 3) {
+            return "Vous avez dépassé la limite de projet sur la page d'accueil (3 max.)"
+          }
+          return true
+        }),
+      // readOnly: async ({value}) => {
+      //   console.log('value =>', value)
+      //   const countFeaturedProject = await client.fetch(`count(*[featuredProject == true])`)
+      //   console.log('countFeaturedProject =>', countFeaturedProject)
+      //   const isFeaturedProjectExceed = countFeaturedProject >= 3
+      //   console.log('isFeaturedProjectExceed =>', isFeaturedProjectExceed)
+      //   if (value === true) {
+      //     return false
+      //   } else {
+      //     return isFeaturedProjectExceed
+      //   }
+      // },
+    },
     {
       name: 'name',
       type: 'string',
@@ -92,4 +135,7 @@ export default {
       of: [{type: 'beforeAfterImages'}],
     },
   ],
+  initialValue: {
+    featuredProject: false,
+  },
 }
