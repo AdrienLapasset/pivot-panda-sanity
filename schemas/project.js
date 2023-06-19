@@ -134,6 +134,12 @@ export default {
       type: 'array',
       of: [{type: 'beforeAfterImages'}],
     },
+    {
+      name: 'projectCarousel',
+      title: 'Galerie photo',
+      type: 'array',
+      of: [{type: 'projectCarousel'}],
+    },
   ],
   initialValue: {
     featuredProject: false,
