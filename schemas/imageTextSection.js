@@ -1,13 +1,13 @@
 export default {
-  name: 'contentBlock',
-  title: 'Bloc de contenu',
+  name: 'ImageTextSection',
+  title: 'Section photo et description',
   type: 'object',
   fields: [
     {
       name: 'image',
       title: 'Image',
       type: 'image',
-      description: 'Image associée au bloc de contenu',
+      description: 'Photo de la section',
       options: {hotspot: true},
     },
     {

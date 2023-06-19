@@ -1,6 +1,6 @@
 import blockContent from './blockContent'
 import project from './project'
-import contentBlock from './contentBlock'
+import ImageTextSection from './imageTextSection'
 import beforeAfterImages from './beforeAfterImages'
 
-export const schemaTypes = [blockContent, project, contentBlock, beforeAfterImages]
+export const schemaTypes = [blockContent, project, ImageTextSection, beforeAfterImages]

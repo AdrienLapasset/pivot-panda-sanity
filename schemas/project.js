@@ -80,10 +80,10 @@ export default {
       validation: (Rule) => Rule.required(),
     },
     {
-      name: 'contentBlocks',
+      name: 'ImageTextSections',
       title: 'Blocs de contenu',
       type: 'array',
-      of: [{type: 'contentBlock'}],
+      of: [{type: 'ImageTextSection'}],
     },
     {
       name: 'beforeAfterImages',
