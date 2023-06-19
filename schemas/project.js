@@ -124,7 +124,7 @@ export default {
     },
     {
       name: 'ImageTextSections',
-      title: 'Blocs de contenu',
+      title: 'Section image et texte',
       type: 'array',
       of: [{type: 'ImageTextSection'}],
     },
