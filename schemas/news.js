@@ -32,5 +32,11 @@ export default {
       options: {hotspot: true},
       validation: (Rule) => Rule.required(),
     },
+    {
+      title: "Lien de l'article LinkedIn",
+      description: "Sur LinkedIn 'Copier le lien vers le post' sur les ... du post",
+      name: 'linkedinUrl',
+      type: 'url',
+    },
   ],
 }
