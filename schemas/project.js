@@ -111,6 +111,14 @@ export default {
       validation: (Rule) => Rule.required(),
     },
     {
+      name: 'video',
+      title: 'Vidéo du projet',
+      type: 'file',
+      preview: {
+        media: 'video',
+      },
+    },
+    {
       name: 'ImageTextSections',
       title: 'Section image et texte',
       type: 'array',
