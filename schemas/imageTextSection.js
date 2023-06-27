@@ -1,7 +1,6 @@
 export default {
   name: 'ImageTextSection',
   title: 'Section image et texte',
-  Description: 'Une section simple avec une image et un texte',
   type: 'object',
   fields: [
     {
