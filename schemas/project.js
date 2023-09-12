@@ -1,5 +1,4 @@
 import {createClient} from '@sanity/client'
-import {MdCompare as Icon} from 'react-icons/md'
 
 export const client = createClient({
   projectId: 'pp1ujuyb',
@@ -18,22 +17,22 @@ export default {
       description: "Projet visible sur la page d'accueil (3 max.)",
       name: 'isFeaturedProject',
       type: 'boolean',
-      validation: (Rule) =>
-        Rule.custom(async (value, context) => {
-          const documentId = context.document._id
-          let currentCount = 0
-          if (value === true) currentCount = 1
-          const featuredProject = await client.fetch(`*[_type == 'project' && isFeaturedProject]`)
-          // console.log('featuredProjectLenght =>', featuredProject.length)
-          const isFeaturedProject = featuredProject.some((project) => project._id === documentId)
-          if (isFeaturedProject) {
-            // console.log('isfeaturedProject')
-            return true
-          } else if (currentCount + featuredProject.length > 3) {
-            return "Vous avez dépassé la limite de projet sur la page d'accueil (3 max.)"
-          }
-          return true
-        }),
+      // validation: (Rule) =>
+      //   Rule.custom(async (value, context) => {
+      //     const documentId = context.document._id
+      //     let currentCount = 0
+      //     if (value === true) currentCount = 1
+      //     const featuredProject = await client.fetch(`*[_type == 'project' && isFeaturedProject]`)
+      //     // console.log('featuredProjectLenght =>', featuredProject.length)
+      //     const isFeaturedProject = featuredProject.some((project) => project._id === documentId)
+      //     if (isFeaturedProject) {
+      //       // console.log('isfeaturedProject')
+      //       return true
+      //     } else if (currentCount + featuredProject.length > 3) {
+      //       return "Vous avez dépassé la limite de projet sur la page d'accueil (3 max.)"
+      //     }
+      //     return true
+      //   }),
     },
     {
       name: 'name',
