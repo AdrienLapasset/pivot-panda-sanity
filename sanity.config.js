@@ -22,10 +22,10 @@ export default defineConfig({
           sites: [
             {
               title: 'Site',
-              apiId: 'bbd72bc8-f6a2-488a-8ef5-b3c610f1fc00',
-              buildHookId: '6492e08a83cc3f4ec7386214',
-              name: 'staging-pivotpanda',
-              url: 'staging-pivotpanda.netlify.app',
+              apiId: '39f17bb4-a680-4a59-8155-35b53d758ce3',
+              buildHookId: '65017de88625645fb4d8477c',
+              name: 'pivotpanda',
+              url: 'pivotpanda.netlify.app',
             },
           ],
         }),
