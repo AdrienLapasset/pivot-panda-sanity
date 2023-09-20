@@ -1,4 +1,5 @@
 import {createClient} from '@sanity/client'
+import {orderRankField, orderRankOrdering} from '@sanity/orderable-document-list'
 
 export const client = createClient({
   projectId: 'pp1ujuyb',
@@ -11,7 +12,9 @@ export default {
   name: 'project',
   type: 'document',
   title: 'Projets',
+  orderings: [orderRankOrdering],
   fields: [
+    orderRankField({type: 'project'}),
     {
       title: 'Projet mis en avant',
       description: "Projet visible sur la page d'accueil (3 max.)",
