@@ -23,22 +23,6 @@ export default defineConfig({
           ])
       },
     }),
-    dashboardTool({
-      widgets: [
-        netlifyWidget({
-          title: 'Déploiement du site',
-          sites: [
-            {
-              title: 'Site',
-              apiId: '39f17bb4-a680-4a59-8155-35b53d758ce3',
-              buildHookId: '65017de88625645fb4d8477c',
-              name: 'pivotpanda',
-              url: 'pivotpanda.netlify.app',
-            },
-          ],
-        }),
-      ],
-    }),
   ],
 
   schema: {
