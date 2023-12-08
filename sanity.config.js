@@ -1,8 +1,6 @@
 import {defineConfig} from 'sanity'
 import {deskTool} from 'sanity/desk'
 import {schemaTypes} from './schemas'
-import {dashboardTool} from '@sanity/dashboard'
-import {netlifyWidget} from 'sanity-plugin-dashboard-widget-netlify'
 import {orderableDocumentListDeskItem} from '@sanity/orderable-document-list'
 
 export default defineConfig({
